@@ -1,40 +1,39 @@
-/* পুরো পেজের গ্লোবাল স্টাইল */
+@import url('https://fonts.googleapis.com/css2?family=Kalpurush&display=swap');
+
 body {
-    font-family: 'Kalpurush', 'Siyam Rupali', Arial, sans-serif;
-    background-color: #f4f6f9;
+    font-family: 'Kalpurush', 'Arial', sans-serif;
+    background-color: #ffffff;
     margin: 0;
-    padding: 30px;
-    color: #222;
-    line-height: 1.7;
+    padding: 20px 15px;
+    color: #000000;
+    line-height: 1.6;
 }
 
-/* সনদের মূল কন্টেইনার এবং বর্ডার */
 .certificate-container {
     max-width: 850px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 50px;
-    border: 6px double #003366; /* অফিশিয়াল নেভি ব্লু ডাবল বর্ডার */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    position: relative;
+    box-sizing: border-box;
 }
 
-/* লোগো ও হেডার লেআউট (ফ্লেক্সবক্স দিয়ে পাশাপাশি করা হয়েছে) */
+/* মেইন ডাবল বর্ডার ফ্রেম (ছবির মতো প্রফেশনাল লুকের জন্য) */
+.certificate-border {
+    border: 3px double #000000;
+    padding: 35px;
+    background: #ffffff;
+}
+
+/* হেডার সেকশন */
 .header-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* গোল লোগো দুটির নির্দিষ্ট সাইজ এবং পজিশন */
-.logo-left img, .logo-right img {
-    width: 100px;
-    height: 100px;
+.logo-left img {
+    width: 80px;
+    height: auto;
     object-fit: contain;
-    border-radius: 50%; /* লোগো বৃত্তাকার রাখার জন্য */
 }
 
 .header-text {
@@ -42,140 +41,196 @@ body {
     flex-grow: 1;
 }
 
-.header-text h2 {
-    margin: 0;
-    font-size: 28px;
-    color: #003366;
-    font-weight: bold;
+.center-logo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 2px;
 }
 
-.header-text .location {
-    margin: 3px 0 10px 0;
-    font-size: 16px;
-    color: #555;
+.header-text h2 {
+    margin: 2px 0;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.location {
+    margin: 2px 0;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.title-container {
+    margin-top: 6px;
 }
 
 .certificate-title {
-    margin: 5px 0 0 0;
-    font-size: 22px;
-    color: #b8860b; /* সোনালী রন */
-    text-decoration: underline;
-    letter-spacing: 1px;
+    margin: 0;
+    font-size: 19px;
+    font-weight: bold;
 }
 
-/* সনদ নং ও তারিখ */
+/* মেটা ইনফো */
 .meta-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
-    font-size: 16px;
-    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
 }
 
-.meta-info p {
-    margin: 0;
-}
-
-/* মূল বিবরণ */
-.main-content p {
+.content-body {
     text-align: justify;
-    text-indent: 40px;
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: 15.5px;
+    margin-bottom: 20px;
 }
 
-/* টেবিল ডিজাইন */
-.succession-table {
+/* টেবিল (কোনো কালার নেই) */
+.holder-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    font-size: 15px;
+    margin: 20px 0;
 }
 
-.succession-table th, .succession-table td {
-    border: 1px solid #333;
-    padding: 10px;
+.holder-table th, .holder-table td {
+    border: 1px solid #000000;
+    padding: 8px 10px;
     text-align: center;
-}
-
-.succession-table th {
-    background-color: #f2f5f8;
-    font-weight: bold;
-    color: #003366;
-}
-
-.status-dead {
-    color: #c0392b;
-    font-weight: bold;
-}
-
-/* বিশেষ দ্রষ্টব্য নোট */
-.declaration p {
     font-size: 15px;
+    color: #000000;
+}
+
+.holder-table th {
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.divider-line {
+    border: none;
+    border-top: 1px dashed #000000;
+    margin: 25px 0 15px 0;
+}
+
+.warning-text {
+    font-size: 13px;
     text-align: justify;
-    margin-bottom: 12px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
-.declaration .note {
-    font-size: 13.5px;
-    background-color: #fff9f9;
-    padding: 12px;
-    border-left: 4px solid #c0392b;
-    margin-top: 20px;
-}
-
-/* স্বাক্ষর সেকশন */
-.signature-section {
+/* ছবির মতো নিচের সেকশন এক লাইনে আনার ম্যাজিক সিএসএস */
+.footer-sign-section {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
-    padding: 0 10px;
-    font-size: 14px;
-}
-
-.sig-box {
-    text-align: center;
-    width: 40%;
-}
-
-.sig-line {
-    margin-bottom: 5px;
-    color: #999;
-}
-
-.sig-box p {
-    margin: 3px 0;
-}
-
-.sig-box .date {
-    margin-top: 5px;
-    font-style: italic;
-}
-
-/* ফুটার বা ভেরিফিকেশন লিংক */
-.footer-link {
+    align-items: flex-end; /* সবগুলোকে নিচের লাইনের সাথে সোজা রাখবে */
     margin-top: 40px;
-    font-size: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* বামের কিউআর ব্লক */
+.qr-block {
+    width: 20%;
+    text-align: left;
+}
+
+.qr-placeholder {
+    width: 85px;
+    height: 85px;
+    border: 1px dashed #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border-top: 1px dashed #ccc;
-    padding-top: 15px;
+    font-size: 11px;
 }
 
-.footer-link a {
-    color: #003366;
-    text-decoration: none;
-    font-weight: bold;
+/* মাঝের ও ডানের সাইন ব্লক */
+.sign-block {
+    width: 35%;
+    text-align: center;
 }
 
-/* প্রিন্ট লেআউট অপটিমাইজেশন */
-@media print {
-    body {
-        background-color: #fff;
-        padding: 0;
+.officer-sign {
+    text-align: left; /* ছবির মতো বামে এলাইন করা */
+    padding-left: 20px;
+}
+
+.admin-sign {
+    text-align: center; /* ছবির মতো ডানে এলাইন করা */
+}
+
+/* স্বাক্ষরের উপরের দাগ */
+.signature-line {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.designation {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.office-address {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* ভেরিফিকেশন লিঙ্ক (সবার নিচে ছড়ানো থাকবে) */
+.verification-link {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.verification-link a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* মোবাইলের জন্য রেসপন্সিভ ভিউ */
+@media screen and (max-width: 650px) {
+    .certificate-border {
+        padding: 15px;
     }
-    .certificate-container {
-        box-shadow: none;
-        border: 6px double #000;
-        padding: 30px;
+
+    .header-section {
+        flex-direction: column;
+        gap: 12px;
     }
+
+    .meta-info {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .holder-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .footer-sign-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+/* কিউআর কোডের বক্স স্টাইল */
+#qrcode {
+    width: 85px;
+    height: 85px;
+    display: block;
+}
+
+#qrcode img {
+    width: 100%;
+    height: 100%;
+}
 }
